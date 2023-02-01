@@ -1,5 +1,6 @@
 package com.lcwd.todo.models;
 
+//yaha bnayi h logic
 public class Todo {
 
     private int id;
