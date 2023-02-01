@@ -1,5 +1,7 @@
 package com.lcwd.todo.controllers;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,11 +20,13 @@ public class TodoController {
     Logger logger = LoggerFactory.getLogger(TodoController.class);
 
     @PostMapping
-    public Todo createTodoHandler(@RequestBody Todo todo) {
+
+    // responseENtitty se status vgerh
+    public ResponseEntity<Todo> createTodoHandler(@RequestBody Todo todo) {
 
         logger.info("Create Todo");
         Todo todo1 = TodoService.createTodo(todo);
-        return todo1;
+        return new ResponseEntity<>(todo1, HttpStatus.CREATED);
 
     }
 
