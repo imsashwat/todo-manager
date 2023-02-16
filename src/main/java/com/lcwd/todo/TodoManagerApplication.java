@@ -19,7 +19,9 @@ public class TodoManagerApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(TodoManagerApplication.class, args);
 	}
+	
 
+	//todo 
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub

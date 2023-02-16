@@ -29,7 +29,7 @@ public class TodoDao {
         // unki values
         int rows = template.update(insertQuery, todo.getId(), todo.getTitle(), todo.getContent(), todo.getStatus(),
                 todo.getAddedDate(), todo.getTodoDate());
-
+        
         return todo;
 
     }
